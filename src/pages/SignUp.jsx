@@ -201,7 +201,7 @@ export default function SignUp() {
               <p className="text-base text-[#b0b0b0] font-normal">
                 Already have an account?{" "}
                 <Link
-                  to="./logIn.html"
+                  to={'sign-in'}
                   className="no-underline font-medium text-white"
                 >
                   Log In

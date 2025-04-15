@@ -88,7 +88,7 @@ export default function SignIn() {
                 Don't have an account?{" "}
                 <Link
                   className="no-underline font-medium text-white"
-                  to="./index.html"
+                  to={'sign-up'}
                 >
                   Sign up
                 </Link>
