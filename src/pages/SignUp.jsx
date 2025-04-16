@@ -15,13 +15,13 @@ export default function SignUp() {
       >
         <div className="max-[1000px]:p-5 max-[1000px]:flex-col max-[1000px]:gap-[50px] min-h-screen bg-[#000000b2] flex items-center justify-center gap-5 px-[5%] py-[25px]">
           <div className="flex-1 text-center">
-            <h3 className="max-[500px]:mb-[10px] max-[1000px]:mb-0 font-semibold text-2xl text-white mb-2.5">
+            <h3 className="max-[500px]:mb-0 max-[1000px]:mb-0 font-semibold text-2xl text-white mb-2.5">
               Get Your Personal AI
             </h3>
             <h1 className="max-[500px]:text-[60px] max-[500px]:mb-0 max-[1000px]:mb-[20px] font-medium text-[100px] text-[#ffd56b] mb-[50px]">
               Interiors
             </h1>
-            <p className="max-[500px]:mb-0 max-[1000px]:mb-[20px] font-medium text-xl text-white max-w-[522px] mx-auto my-[50px]">
+            <p className="max-[500px]:m-0 max-[1000px]:mb-[20px] font-medium text-xl text-white max-w-[522px] mx-auto my-[50px]">
               you'll unlock endless possibilities to remaining & Transform Any
               home using AI.
             </p>

@@ -25,7 +25,7 @@ export default function Header() {
             <li>
               <Link
                 className="text-base font-medium text-[#2a2a2a] cursor-pointer no-underline leading-[100%] hover:text-[#007b82] visited:text-[#007b82] visited:font-bold"
-                to=""
+                to="/"
               >
                 Home
               </Link>
@@ -85,10 +85,10 @@ export default function Header() {
         </div>
       </header>
 
-      <div
+      <section 
         className={`fixed top-0 ${
           showSideBar ? "right-0" : "right-[-200%]"
-        } transition-all w-[70vw] sm:w-[50%] bg-white shadow-2xl min-h-[120vh] flex flex-col min-[900px]:hidden gap-7 justify-start items-start p-[40px]`}
+        } transition-all w-[70vw] sm:w-[50%] bg-white shadow-2xl min-h-[120vh] flex flex-col min-[900px]:hidden gap-7 justify-start items-start p-[40px] z-10`}
         style={{ listStyle: "none" }}
       >
         <svg
@@ -154,7 +154,7 @@ export default function Header() {
         >
           Sign Up
         </button>
-      </div>
+      </section>
     </div>
   );
 }
