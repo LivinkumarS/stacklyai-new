@@ -45,7 +45,7 @@
   }
 }
 
-@keyframes homeSide{
+@keyframes homeSide {
   0% {
     transform: translateX(-10%);
     opacity: 0;
@@ -62,4 +62,31 @@
 
 .home-bg-img .design {
   animation: homeEntranceR 3s ease forwards 3s 1;
+}
+
+.ul-list > ul {
+  max-width: 405px;
+  width: 100%;
+  min-height: 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ul-list > ul > li {
+  color: white;
+  list-style: none;
+
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 140%;
+
+  text-align: center;
+}
+.ul-list > ul > li::before {
+  content: ".";
+  color: aqua;
+  font-size: 50px;
+  margin: 10px;
 }
