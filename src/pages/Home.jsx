@@ -544,13 +544,13 @@ export default function Home() {
                           <span className="group-hover:text-[#007b82] text-[white] max-w-[92px] min-h-[22px] text-base font-medium leading-[140%] text-center">
                             Commercial
                           </span>{" "}
-                          <input type="radio" name="buildingType"/>
+                          <input type="radio" name="buildingType" />
                         </div>
                         <div className="max-w-[255px] w-full min-h-[42px] rounded bg-[#00000033] flex justify-between items-center px-2.5 py-0 hover:bg-white group">
                           <span className="group-hover:text-[#007b82] text-[white] max-w-[92px] min-h-[22px] text-base font-medium leading-[140%] text-center">
                             Residential
                           </span>{" "}
-                          <input type="radio" name="buildingType"/>
+                          <input type="radio" name="buildingType" />
                         </div>
                       </div>
                     </div>
@@ -662,13 +662,13 @@ export default function Home() {
                           <span className="text-[white] max-w-[92px] min-h-[22px] text-base font-medium leading-[140%] text-center group-hover:text-[#007b82]">
                             Commercial
                           </span>{" "}
-                          <input type="radio" name="buildingTy "/>
+                          <input type="radio" name="buildingTy " />
                         </div>
                         <div className="max-w-[255px] w-full min-h-[42px] rounded bg-[#00000033] flex justify-between items-center px-2.5 py-0 hover:bg-white group cursor-pointer">
                           <span className="text-[white] max-w-[92px] min-h-[22px] text-base font-medium leading-[140%] text-center group-hover:text-[#007b82]">
                             Residential
                           </span>{" "}
-                          <input type="radio" name="buildingTy "/>
+                          <input type="radio" name="buildingTy " />
                         </div>
                       </div>
                       <div className="max-w-[550px] w-full min-h-[42px] flex justify-between items-center gap-3">
@@ -676,13 +676,13 @@ export default function Home() {
                           <span className="text-[white] max-w-[92px] min-h-[22px] text-base font-medium leading-[140%] text-center group-hover:text-[#007b82]">
                             Commercial
                           </span>{" "}
-                          <input type="radio" name="buildingTy "/>
+                          <input type="radio" name="buildingTy " />
                         </div>
                         <div className="max-w-[255px] w-full min-h-[42px] rounded bg-[#00000033] flex justify-between items-center px-2.5 py-0 hover:bg-white group cursor-pointer">
                           <span className="text-[white] max-w-[92px] min-h-[22px] text-base font-medium leading-[140%] text-center group-hover:text-[#007b82]">
                             Residential
                           </span>{" "}
-                          <input type="radio" name="buildingTy "/>
+                          <input type="radio" name="buildingTy " />
                         </div>
                       </div>
                     </div>
@@ -694,7 +694,7 @@ export default function Home() {
                       }}
                     >
                       <img src={sec7Icon3} alt="" />
-                      <button  className="text-white cursor-pointer">
+                      <button className="text-white cursor-pointer">
                         Create Magic
                       </button>
                     </div>
@@ -861,6 +861,52 @@ export default function Home() {
               </span>{" "}
               This brown-themed lounge offers a cozy yet professional
               atmosphere, balancing work and relaxation effortlessly."
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 11 */}
+      <section className="max-w-[100vw] w-full min-h-[773px] flex flex-col justify-center items-center gap-[30px]">
+        <h1 className="max-w-[1080px] w-full min-h-[100px] text-4xl font-medium leading-[140%] text-center text-black">
+          Explore our community's creations for <span>inspiration</span>, then
+          craft your <span className="text-[aqua]">own project</span> and share amazing images with the
+          world.
+        </h1>
+        <div className="max-w-[1070px] w-full min-h-[401px] flex flex-col justify-center items-center gap-5">
+          <div className="w-full flex justify-center items-center gap-[30px]">
+            <div className="max-w-[522px] w-full min-h-[313px] rounded bg-center bg-cover bg-no-repeat object-cover">
+              <div className="para">
+                <h4>Orginal Room</h4>
+              </div>
+            </div>
+
+            <div className="img2">
+              <div className="para">
+                <h4>STACKLY AI</h4>
+              </div>
+            </div>
+          </div>
+
+          <div className="nav">
+            <div className="arrow">
+              <img src="./assets/home/sec11/Vector.png" alt="left" />
+            </div>
+
+            <div className="balls">
+              <div className="ball1"></div>
+              <div className="ball1"></div>
+              <div className="ball1"></div>
+            </div>
+
+            <div className="arrow">
+              <img src="./assets/home/sec11/Vector (1).png" alt="right" />
+            </div>
+          </div>
+
+          <div className="learn">
+            <p>
+              <a href="">Learn More</a>
             </p>
           </div>
         </div>
