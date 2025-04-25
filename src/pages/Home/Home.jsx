@@ -579,18 +579,18 @@ export default function Home() {
                         Select Building Type
                       </p>
                       <div className="max-w-[550px] w-full min-h-[42px] flex justify-between items-center gap-3">
-                        <div className="max-w-[255px] w-full min-h-[42px] rounded bg-[#00000033] flex justify-between items-center px-2.5 py-0 hover:bg-white group">
+                        <label htmlFor="btype1" className="max-w-[255px] w-full min-h-[42px] rounded bg-[#00000033] flex justify-between items-center px-2.5 py-0 hover:bg-white group">
                           <span className="group-hover:text-[#007b82] text-[white] max-w-[92px] min-h-[22px] text-base font-medium leading-[140%] text-center">
                             Commercial
                           </span>{" "}
-                          <input type="radio" name="buildingType" />
-                        </div>
-                        <div className="max-w-[255px] w-full min-h-[42px] rounded bg-[#00000033] flex justify-between items-center px-2.5 py-0 hover:bg-white group">
+                          <input type="radio" name="buildingType" id="btype1"/>
+                        </label>
+                        <label htmlFor="btype2" className="max-w-[255px] w-full min-h-[42px] rounded bg-[#00000033] flex justify-between items-center px-2.5 py-0 hover:bg-white group">
                           <span className="group-hover:text-[#007b82] text-[white] max-w-[92px] min-h-[22px] text-base font-medium leading-[140%] text-center">
                             Residential
                           </span>{" "}
-                          <input type="radio" name="buildingType" />
-                        </div>
+                          <input type="radio" name="buildingType" id="btype2"/>
+                        </label>
                       </div>
                     </div>
 
@@ -697,32 +697,32 @@ export default function Home() {
                         Select Building Type
                       </p>
                       <div className="max-w-[550px] w-full min-h-[42px] flex justify-between items-center gap-3">
-                        <div className="max-w-[255px] w-full min-h-[42px] rounded bg-[#00000033] flex justify-between items-center px-2.5 py-0 hover:bg-white group cursor-pointer">
+                        <label htmlFor="btype3" className="max-w-[255px] w-full min-h-[42px] rounded bg-[#00000033] flex justify-between items-center px-2.5 py-0 hover:bg-white group cursor-pointer">
                           <span className="text-[white] max-w-[92px] min-h-[22px] text-base font-medium leading-[140%] text-center group-hover:text-[#007b82]">
                             Commercial
                           </span>{" "}
-                          <input type="radio" name="buildingTy " />
-                        </div>
-                        <div className="max-w-[255px] w-full min-h-[42px] rounded bg-[#00000033] flex justify-between items-center px-2.5 py-0 hover:bg-white group cursor-pointer">
+                          <input type="radio" name="buildingTy" id="btype3" />
+                        </label>
+                        <label htmlFor="btype4" className="max-w-[255px] w-full min-h-[42px] rounded bg-[#00000033] flex justify-between items-center px-2.5 py-0 hover:bg-white group cursor-pointer">
                           <span className="text-[white] max-w-[92px] min-h-[22px] text-base font-medium leading-[140%] text-center group-hover:text-[#007b82]">
                             Residential
                           </span>{" "}
-                          <input type="radio" name="buildingTy " />
-                        </div>
+                          <input type="radio" name="buildingTy" id="btype4" />
+                        </label>
                       </div>
                       <div className="max-w-[550px] w-full min-h-[42px] flex justify-between items-center gap-3">
-                        <div className="max-w-[255px] w-full min-h-[42px] rounded bg-[#00000033] flex justify-between items-center px-2.5 py-0 hover:bg-white group cursor-pointer">
+                        <label htmlFor="btype5" className="max-w-[255px] w-full min-h-[42px] rounded bg-[#00000033] flex justify-between items-center px-2.5 py-0 hover:bg-white group cursor-pointer">
                           <span className="text-[white] max-w-[92px] min-h-[22px] text-base font-medium leading-[140%] text-center group-hover:text-[#007b82]">
                             Commercial
                           </span>{" "}
-                          <input type="radio" name="buildingTy " />
-                        </div>
-                        <div className="max-w-[255px] w-full min-h-[42px] rounded bg-[#00000033] flex justify-between items-center px-2.5 py-0 hover:bg-white group cursor-pointer">
+                          <input type="radio" name="buildingTy" id="btype5" />
+                        </label>
+                        <label htmlFor="btype6" className="max-w-[255px] w-full min-h-[42px] rounded bg-[#00000033] flex justify-between items-center px-2.5 py-0 hover:bg-white group cursor-pointer">
                           <span className="text-[white] max-w-[92px] min-h-[22px] text-base font-medium leading-[140%] text-center group-hover:text-[#007b82]">
                             Residential
                           </span>{" "}
-                          <input type="radio" name="buildingTy " />
-                        </div>
+                          <input type="radio" name="buildingTy" id="btype6" />
+                        </label>
                       </div>
                     </div>
                     <div
@@ -747,9 +747,9 @@ export default function Home() {
 
       {/* Section 7.5 */}
 
-      <section className="max-w-[100vw] w-full pb-20 px-5 flex flex-col justify-start items-center gap-[30px]">
-        <div className="max-w-[830px] w-full min-h-[300px] flex flex-col justify-center items-center gap-5">
-          <h1 className="max-w-[828px] w-full min-h-[67px] text-5xl font-semibold leading-[140%] text-center text-black">
+      <section className="w-full pb-20 px-5 ">
+        <div className="text-center w-full min-h-[300px] flex flex-col justify-center items-center gap-5">
+          <h1 className=" w-full min-h-[67px] text-5xl font-semibold leading-[140%] text-center text-black">
             <span className="text-[aqua]">SIMPLIFY DESIGN </span>WITH{" "}
             <span className="text-[#078C8C]">STACKLYAI</span>
           </h1>
@@ -757,7 +757,7 @@ export default function Home() {
             3 Easy Steps to Get Started
           </p>
         </div>
-        <div className=" w-full min-h-[auto] flex justify-center items-start gap-5 max-[1000px]:flex-wrap">
+        
           <div className="step1">
             <div
               className="max-w-[411px] w-full min-h-[232px] bg-center bg-no-repeat bg-cover object-cover p-2.5"
@@ -772,7 +772,7 @@ export default function Home() {
               home, or outdoor space.
             </p>
           </div>
-          <div className="step2">
+          <div className="step2 flex flex-col items-center">
             <div
               className="max-w-[411px] w-full min-h-[232px] bg-center bg-no-repeat bg-cover object-cover p-2.5"
               style={{ backgroundImage: "url('/home/sec7-5/step2.jpeg')" }}
@@ -788,7 +788,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="step3">
+          <div className="step3 flex flex-col items-end">
             <div
               className="max-w-[411px] w-full min-h-[232px] bg-center bg-no-repeat bg-cover object-cover p-2.5"
               style={{ backgroundImage: "url('/home/sec7-5/step3.jpeg')" }}
@@ -802,7 +802,6 @@ export default function Home() {
               and design concepts in under 25 seconds.
             </p>
           </div>
-        </div>
       </section>
 
       {/* Section 8 */}
