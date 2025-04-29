@@ -149,7 +149,7 @@ export default function SignUp() {
                 required
               />
 
-              <div className="max-w-[406px] w-full bg-[white] flex items-center justify-center p-[15px] rounded-[5px]">
+              <div class="max-w-[406px] w-full bg-[white] flex items-center justify-center p-[15px] rounded-[5px]">
                 <input
                   className="bg-white flex-1 placeholder:text-base placeholder:font-normal placeholder:text-[#2a2a2a]"
                   type={showPassword ? "text" : "password"}
@@ -182,7 +182,7 @@ export default function SignUp() {
                 </span>
               </div>
 
-              {/* <div className="max-w-[406px] w-full bg-[white] flex items-center justify-center p-[15px] rounded-[5px]">
+              <div className="max-w-[406px] w-full bg-[white] flex items-center justify-center p-[15px] rounded-[5px]">
                 <input
                   className="placeholder:text-base placeholder:font-normal placeholder:text-[#2a2a2a] flex-1 bg-white"
                   type="text"
@@ -197,7 +197,7 @@ export default function SignUp() {
                 >
                   Apply
                 </span>
-              </div> */}
+              </div>
 
               <button
                 type="submit"
