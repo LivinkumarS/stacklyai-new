@@ -68,7 +68,7 @@ export default function Header() {
           </ul>
         </nav>
         <div className="flex items-center justify-center z-10 relative gap-5">
-          {!userInfo.userId ? (
+          {userInfo.userId ? (
             <div className="group z-10 relative cursor-pointer inline-flex items-center justify-center gap-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -91,9 +91,9 @@ export default function Header() {
                     width="32.001"
                     height="32.0025"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                   >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix
                       in="SourceAlpha"
                       type="matrix"
@@ -236,7 +236,7 @@ export default function Header() {
           Contact Us
         </Link>
 
-        {userInfo.userId && (
+        {!userInfo.userId && (
           <>
             <button
               className="w-[107px] h-[39px] text-base font-semibold leading-[100%] border bg-white text-[#007b82] cursor-pointer flex justify-center items-center no-underline rounded-[5px] border-solid border-[#007b82] active:bg-[#007b82] active:text-white"

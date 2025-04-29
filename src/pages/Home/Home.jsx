@@ -59,7 +59,6 @@ import { UserContext } from "../../context/UserContext";
 
 export default function Home() {
   const { userInfo } = useContext(UserContext);
-  console.log(userInfo);
   
 
   const faqs = [
