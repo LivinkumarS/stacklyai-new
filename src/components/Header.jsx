@@ -204,6 +204,9 @@ export default function Header() {
         <Link
           className="text-base font-medium text-[#2a2a2a] cursor-pointer no-underline leading-[100%] hover:text-[#007b82] visited:text-[#007b82] visited:font-bold"
           to="/"
+          onClick={() => {
+            setShowSideBar(false);
+          }}
         >
           Home
         </Link>
@@ -211,6 +214,9 @@ export default function Header() {
         <Link
           className="text-base font-medium text-[#2a2a2a] cursor-pointer no-underline leading-[100%] hover:text-[#007b82] visited:text-[#007b82] visited:font-bold"
           to=""
+          onClick={() => {
+            setShowSideBar(false);
+          }}
         >
           Products
         </Link>
@@ -218,6 +224,9 @@ export default function Header() {
         <Link
           className="text-base font-medium text-[#2a2a2a] cursor-pointer no-underline leading-[100%] hover:text-[#007b82] visited:text-[#007b82] visited:font-bold"
           to=""
+          onClick={() => {
+            setShowSideBar(false);
+          }}
         >
           Pricing
         </Link>
@@ -225,6 +234,9 @@ export default function Header() {
         <Link
           className="text-base font-medium text-[#2a2a2a] cursor-pointer no-underline leading-[100%] hover:text-[#007b82] visited:text-[#007b82] visited:font-bold"
           to=""
+          onClick={() => {
+            setShowSideBar(false);
+          }}
         >
           API
         </Link>
@@ -232,6 +244,9 @@ export default function Header() {
         <Link
           className="text-base font-medium text-[#2a2a2a] cursor-pointer no-underline leading-[100%] hover:text-[#007b82] visited:text-[#007b82] visited:font-bold"
           to=""
+          onClick={() => {
+            setShowSideBar(false);
+          }}
         >
           Contact Us
         </Link>
@@ -242,6 +257,7 @@ export default function Header() {
               className="w-[107px] h-[39px] text-base font-semibold leading-[100%] border bg-white text-[#007b82] cursor-pointer flex justify-center items-center no-underline rounded-[5px] border-solid border-[#007b82] active:bg-[#007b82] active:text-white"
               onClick={() => {
                 navigate("/sign-in");
+                setShowSideBar(false);
               }}
             >
               Log In
@@ -250,6 +266,7 @@ export default function Header() {
               className="w-[107px] h-[39px] text-base font-semibold leading-[100%] border bg-[#007b82] text-white cursor-pointer flex justify-center items-center no-underline rounded-[5px] border-solid border-white active:bg-white active:text-[#007b82]"
               onClick={() => {
                 navigate("/sign-up");
+                setShowSideBar(false);
               }}
             >
               Sign Up

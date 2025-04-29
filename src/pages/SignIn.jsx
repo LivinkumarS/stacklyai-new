@@ -42,24 +42,24 @@ export default function SignIn() {
         style={{ backgroundImage: 'url("/logIn/bg-img.jpeg")' }}
       >
         <div className="max-[1000px]:p-[20px] max-[1000px]:flex-col max-[1000px]:gap-[50px] min-h-screen bg-[#000000b2] flex items-center justify-center gap-5 px-[5%] py-[25px]">
-          <div className="flex-1 text-center max-w-[631px]">
+          <div class="flex-1 text-center max-w-[631px]">
             <h3 className="max-[1000px]:mb-[20px] max-[500px]:mb-[10px] max-[500px]:text-center max-[500px]:text-[30px]  max-[500px]:leading-9 font-semibold text-[44px] text-white text-start leading-[64px] mb-2.5">
               Redesign your{" "}
-              <span className=" max-[500px]:text-[30px] font-semibold text-[44px] text-[#ffd56b] mb-[50px]">
+              <span class=" max-[500px]:text-[30px] font-semibold text-[44px] text-[#ffd56b] mb-[50px]">
                 "Interiors"
               </span>
               <br />
               with Stackly in less than 25 seconds.
             </h3>
-
-            <button className="w-[436px] h-[55px] mt-[20px] rounded-full border border-white/3 text-white text-[18px] font-semibold bg-black/50 hover:bg-black transition duration-300">
-              Start Free Trial
-            </button>
-
-            <p className="font-medium text-base pt-[20px] text-[#b0b0b0]">
-              Get started with 10 free outputs – No credit card needed!
-            </p>
           </div>
+
+          <button className="w-[436px] h-[55px] rounded-full border border-white/3 text-white text-[18px] font-semibold bg-black/50 hover:bg-black transition duration-300">
+            Start Free Trial
+          </button>
+
+          <p className="font-medium text-base pt-[20px] text-[#b0b0b0]">
+            Get started with 10 free outputs – No credit card needed!
+          </p>
 
           <div className="flex-1 max-[1000px]:w-full max-w-[522px] max-h-[559px] border flex flex-col gap-5 items-center justify-center bg-[#0000004d] p-5 rounded-[10px] border-solid border-[white]">
             <h3 className="font-semibold text-[26px] text-white">
