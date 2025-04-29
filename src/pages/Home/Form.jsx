@@ -341,7 +341,7 @@ export default function Form() {
                         onChange={(e) => {
                           handleChange(e.target.value, "roomType");
                         }}
-                        className="w-full"
+                        className="w-full bg-white"
                       >
                         <option value=""></option>
                         <option value="Bedroom">Bedroom</option>
@@ -367,7 +367,7 @@ export default function Form() {
                         onChange={(e) => {
                           handleChange(e.target.value, "roomStyle");
                         }}
-                        className="w-full"
+                        className="w-full bg-white"
                       >
                         <option value=""></option>
                         <option value="Midcentury Modern">
