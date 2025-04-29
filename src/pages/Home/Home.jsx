@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import Header from "../../components/Header";
 import Form from "./Form";
 import sec3Pattern1 from "../../assets/home/sec3/arcticons_ai-chat-alt-1.png";
@@ -55,8 +55,13 @@ import sec14Img4 from "../../assets/home/sec14/m2.jpg";
 import sec14Img5 from "../../assets/home/sec14/m3.jpg";
 import FAQ from "./FAQ";
 import HeroBanner from "./HeroBanner";
+import { UserContext } from "../../context/UserContext";
 
 export default function Home() {
+  const { userInfo } = useContext(UserContext);
+  console.log(userInfo);
+  
+
   const faqs = [
     {
       question: "What is Stackly AI?",
@@ -80,14 +85,12 @@ export default function Home() {
     },
   ];
 
-
   return (
     <div>
-      <Header />
 
       {/* banner  */}
 
-      <HeroBanner/>
+      <HeroBanner />
 
       {/* section 2 */}
 
@@ -394,7 +397,7 @@ export default function Home() {
 
       {/* Section 7 */}
 
-      <Form/>
+      <Form />
 
       {/* Section 7.5 */}
 

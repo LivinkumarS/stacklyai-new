@@ -8,7 +8,6 @@ export default function SignUp() {
 
   return (
     <div>
-      <Header />
       <div
         className="bg-center bg-cover bg-no-repeat"
         style={{ backgroundImage: "url('/signUp/bg-img.jpeg')" }}
@@ -142,7 +141,7 @@ export default function SignUp() {
                 required
               />
 
-              <div class="max-w-[406px] w-full bg-[white] flex items-center justify-center p-[15px] rounded-[5px]">
+              <div className="max-w-[406px] w-full bg-[white] flex items-center justify-center p-[15px] rounded-[5px]">
                 <input
                   className="bg-white flex-1 placeholder:text-base placeholder:font-normal placeholder:text-[#2a2a2a]"
                   type={showPassword ? "text" : "password"}

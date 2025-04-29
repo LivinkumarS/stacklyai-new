@@ -18,17 +18,19 @@ export default function HeroBanner() {
       style={{ backgroundImage: "url('/home/sec1/banner-bg.png')" }}
     >
       <div className="bg-[#0000000f]">
-        <div className="w-full h-[46px] flex justify-center items-center bg-[#0000004d] backdrop-blur-[3px]">
-          <marquee className="max-w-[1279px] w-full h-6 z-0">
-            <p className="max-w-[1320px] w-full h-6 text-xl font-medium leading-[100%] text-white">
-              Hey! It looks like you are from USA . We support Purchasing Power
-              Parity pricing, so enjoy 50% off on your subscription. Use code:
-              abc589 Hey! It looks like you are from USA . We support Purchasing
-              Power Parity pricing, so enjoy 50% off on your subscription. Use
-              code: abc589
-            </p>
-          </marquee>
-        </div>
+      <div className="marquee-container">
+  <div className="marquee-content">
+    <span className="marquee-text">
+      Hey! It looks like you are from USA. We support Purchasing Power Parity pricing,
+      so enjoy 50% off on your subscription. Use code: abc589
+    </span>
+    <span className="marquee-text">
+      Hey! It looks like you are from USA. We support Purchasing Power Parity pricing,
+      so enjoy 50% off on your subscription. Use code: abc589
+    </span>
+  </div>
+</div>
+
 
         <div className="max-[1000px]:flex-col w-full min-h-screen flex justify-center items-center gap-10 px-[5%] py-[30px]">
           <div className="max-w-[700px] min-h-[304px] flex flex-col justify-center gap-10 items-start">
