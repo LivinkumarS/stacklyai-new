@@ -11,7 +11,7 @@ export default function Header() {
 
   return (
     <div>
-      <header className="w-full h-[90px] bg-white flex justify-between items-center backdrop-blur-[6px] xl:px-20 xl:py-[25px] md:p-[20px] p-[15px] relative z-10 gap-0">
+      <header className="w-full  h-[70px] sm:h-[90px] bg-white flex justify-between items-center backdrop-blur-[6px] xl:px-20 xl:py-[25px] md:p-[20px] p-[15px] relative z-10 gap-0">
         <img
           className="cursor-pointer max-[400px]:w-[50%]"
           onClick={() => {
