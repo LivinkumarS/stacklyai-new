@@ -63,7 +63,7 @@ const DraggableImages = ({ imageLeft, imageRight }) => {
 
       {/* Vertical divider line */}
       <div
-        className="absolute top-0 bottom-0 w-[2px] bg-black z-30"
+        className="absolute top-0 bottom-0 w-[2px] bg-white z-30"
         style={{ left: `${position}%`, transform: "translateX(-1px)" }}
       />
 
