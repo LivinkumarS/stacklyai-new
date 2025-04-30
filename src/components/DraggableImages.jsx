@@ -41,7 +41,7 @@ const DraggableImages = ({ imageLeft, imageRight }) => {
   return (
     <div
       ref={containerRef}
-      className="relative w-full max-w-[522px] aspect-video overflow-hidden rounded-lg"
+      className=" relative w-[300px] md:w-full md:max-w-[522px] aspect-video overflow-hidden rounded-lg"
     >
       {/* Left image */}
       <img
