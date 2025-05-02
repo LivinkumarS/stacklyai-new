@@ -38,8 +38,6 @@ import sec9Frame from "../../assets/home/sec9/Frame 168.png";
 
 import sec10Img1 from "../../assets/home/sec10/3d-interior-design-free-png 1.png";
 import sec10Img2 from "../../assets/home/sec10/3d-interior-design-png 1.png";
-import sec11Img1 from "../../assets/home/sec11/Frame 78.png";
-import sec11Img2 from "../../assets/home/sec11/Frame 79.png";
 
 
 import sec13Img1 from "../../assets/home/sec13/img1.jpg";
@@ -52,6 +50,7 @@ import sec14Img5 from "../../assets/home/sec14/m3.jpg";
 import FAQ from "./FAQ";
 import HeroBanner from "./HeroBanner";
 import DraggableImageSection from "./DraggableImageSection";
+import ImageSlider from "./ImageSlider";
 
 export default function Home() {
   
@@ -553,53 +552,16 @@ export default function Home() {
       </section>
 
       {/* {section:11} */}
+
+
+            <ImageSlider/>
+
       {/* Section: Community Showcase */}
-      <section className="w-full min-h-[600px] py-16 px-4 flex flex-col justify-center items-center gap-10">
-        <h2 className="text-black text-center text-3xl md:text-4xl font-medium max-w-[900px] leading-snug">
-          Explore our community's creations for{" "}
-          <span className="text-cyan-400">inspiration</span>, then craft your{" "}
-          <span className="text-cyan-400">own project</span> and share amazing
-          images with the world.
-        </h2>
+      
 
-        <div className="flex flex-wrap justify-center items-center gap-6">
-          <div className="relative max-w-[500px] w-full">
-            <img
-              src={sec11Img1}
-              alt="Original Room"
-              className="rounded-md shadow-lg w-full"
-            />
-            <div className="absolute top-3 left-3 bg-black bg-opacity-70 text-white text-sm px-3 py-1 rounded">
-              Original Room
-            </div>
-          </div>
-          <div className="relative max-w-[500px] w-full">
-            <img
-              src={sec11Img2}
-              alt="STACKLY AI"
-              className="rounded-md shadow-lg w-full"
-            />
-            <div className="absolute top-3 left-3 bg-black bg-opacity-70 text-white text-sm px-3 py-1 rounded">
-              STACKLYAI
-            </div>
-          </div>
-        </div>
 
-        <div className="flex justify-center items-center gap-2 mt-8">
-          <span className="w-3 h-3 bg-black rounded-full" />
-          <span className="w-5 h-3 bg-cyan-500 rounded-full" />
-          <span className="w-3 h-3 bg-black rounded-full" />
-        </div>
 
-        <div className="w-full max-w-[1070px] flex justify-end mt-6">
-          <a
-            href="#"
-            className="text-cyan-500 text-lg font-bold underline underline-offset-4 hover:text-cyan-400"
-          >
-            Learn More
-          </a>
-        </div>
-      </section>
+
       {/* {section-12} */}
       <section className="w-full min-h-[200px] py-10 px-4 bg-teal-100 flex flex-col md:flex-row justify-center items-center gap-6">
         <h2 className="text-black text-center md:text-left text-2xl md:text-3xl font-medium max-w-[900px]">
