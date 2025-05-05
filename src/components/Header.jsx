@@ -36,7 +36,7 @@ export default function Header() {
             <li>
               <Link
                 className="text-base font-medium text-[#2a2a2a] cursor-pointer no-underline leading-[100%] hover:text-[#007b82] visited:text-[#007b82] visited:font-bold"
-                to=""
+                to="/products"
               >
                 Products
               </Link>
@@ -213,7 +213,7 @@ export default function Header() {
 
         <Link
           className="text-base font-medium text-[#2a2a2a] cursor-pointer no-underline leading-[100%] hover:text-[#007b82] visited:text-[#007b82] visited:font-bold"
-          to=""
+          to="/products"
           onClick={() => {
             setShowSideBar(false);
           }}
