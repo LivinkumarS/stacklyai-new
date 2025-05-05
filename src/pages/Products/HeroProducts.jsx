@@ -4,7 +4,7 @@ export default function HeroProducts() {
   return (
     <div className="px-[20px] sm:px-[50px] pb-[20px] w-full">
       <div className="w-full my-[20px] sm:my-[60px] text-center flex flex-col justify-center items-center">
-        <h1 className="text-[#2a2a2a] text-4xl font-bold md:text-[58px] mb-[10px] sm:text-[40px]">
+        <h1 className="text-[#2a2a2a] leading-[50px] text-4xl font-bold md:text-[58px] mb-[10px] sm:text-[40px]">
           Discover the <span className="text-[#009a98]">Future of Space </span>
           Transformation
         </h1>
