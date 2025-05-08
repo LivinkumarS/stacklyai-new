@@ -12,9 +12,7 @@
   src: url("./assets/fonts/Inter_18pt-Light.ttf");
 }
 
-/* Header  */
-
-header a.active{
+a.active{
   color: #007b82;
 }
 
