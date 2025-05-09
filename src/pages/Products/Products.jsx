@@ -1,17 +1,17 @@
 import React from "react";
 import HeroProducts from "./HeroProducts";
 import CarouselProducts from "./CarouselProducts";
-import DraggableImages from "./DraggableImages";
-import StepsHome from "../Home/StepsHome";
+import DraggableImagesProducts from "./DraggableImagesProducts";
 import PackageProducts from "./PackageProducts";
+import Form from "../Home/Form";
 
 export default function Products() {
   return (
     <div>
       <HeroProducts />
       <CarouselProducts />
-      <DraggableImages />
-      <StepsHome />
+      <DraggableImagesProducts />
+      <Form/>
       <PackageProducts />
     </div>
   );
