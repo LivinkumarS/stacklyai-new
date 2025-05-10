@@ -1,5 +1,5 @@
 import React from "react";
-import DragSize from "../../assets/product-pg/dragSize.png";
+import DragSize from "../../assets/product-pg/dragsize.png";
 import Search from "../../assets/product-pg/search.png";
 import Input from "../../assets/product-pg/input.Png";
 import Download from "../../assets/product-pg/download.Png";
