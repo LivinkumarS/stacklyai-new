@@ -94,7 +94,7 @@ export default function Home() {
         <h2 className="max-w-[951px] w-full min-h-[53px] text-[44px] font-semibold leading-[100%] text-center text-[#007B82]">
           Smart, fast, and built for excellence.
         </h2>
-        <p className="max-w-[839px] w-full min-h-[76px] text-[20px] font-normal leading-[38px] leading-[100%] h-[38px] text-center text-[#B0B0B0]">
+        <p className="max-w-[839px] w-full min-h-[76px] text-[20px] font-normal leading-[100%] h-[38px] text-center text-[#B0B0B0]">
           Delivering rapid, photo-realistic designs with advanced AI
           technology—trusted by professionals and homeowners alike.
         </p>
@@ -220,7 +220,7 @@ export default function Home() {
               <h3 className="max-w-[211px] w-full min-h-[48px] text-[20px] font-semibold leading-[100%] text-center text-[#2a2a2a]">
                 Interior & Exterior Image Generation
               </h3>
-              <p className="max-w-[250px] w-full min-h-[102px] text-[17px] leading-[34px] font-medium leading-[100%] h-[34px] text-center text-[#b0b0b0]">
+              <p className="max-w-[250px] w-full min-h-[102px] text-[17px] leading-[34px] font-medium h-[34px] text-center text-[#b0b0b0]">
                 Get design ideas for every part of your home—both indoors and
                 outdoors.
               </p>
@@ -235,7 +235,7 @@ export default function Home() {
               <h3 className="max-w-[211px] text-[20px] w-full min-h-[48px]  font-semibold leading-[100%] text-center text-[#2a2a2a]">
                 Unlimited AI Ideas
               </h3>
-              <p className="max-w-[250px] w-full min-h-[102px] leading-[34px] text-[17px] font-medium leading-[100%] h-[34px] text-center text-[#b0b0b0]">
+              <p className="max-w-[250px] w-full min-h-[102px] text-[17px] font-medium leading-[100%] h-[34px] text-center text-[#b0b0b0]">
                 Generate endless creative ideas to transform any space with
                 ease.
               </p>
@@ -250,7 +250,7 @@ export default function Home() {
               <h3 className="max-w-[211px] w-full min-h-[48px] text-[20px] font-semibold leading-[100%] text-center text-[#2a2a2a]">
                 High-Resolution Images
               </h3>
-              <p className="max-w-[250px] w-full min-h-[102px] leading-[34px] text-[17px] font-medium leading-[100%] h-[34px] text-center text-[#b0b0b0]">
+              <p className="max-w-[250px] w-full min-h-[102px] text-[17px] font-medium leading-[100%] h-[34px] text-center text-[#b0b0b0]">
                 Download crystal-clear, AI-generated images that capture every
                 detail.
               </p>
@@ -265,7 +265,7 @@ export default function Home() {
               <h3 className="max-w-[211px] w-full min-h-[48px] text-[20px] font-semibold leading-[100%] text-center text-[#2a2a2a]">
                 Fast Image Generation
               </h3>
-              <p className="max-w-[250px] w-full min-h-[102px] leading-[34px] text-[17px] font-medium leading-[100%] h-[34px] text-center text-[#b0b0b0]">
+              <p className="max-w-[250px] w-full min-h-[102px] text-[17px] font-medium leading-[100%] h-[34px] text-center text-[#b0b0b0]">
                 Create stunning, AI-powered images in just seconds.
               </p>
             </div>
@@ -624,8 +624,8 @@ export default function Home() {
             {/* Member Cards */}
             <div className="w-[100vw] flex justify-center item-center flex-wrap gap-10">
               {/* Card 1 */}
-              <div className="max-w-[413px] min-h-[288px] bg-white rounded-[12px] p-10 flex flex-col items-center">
-                <div className="min-w-[413px] h-full flex justify-around items-center">
+              <div className="sm:max-w-[413px] sm:min-h-[288px] h-auto w-[90%] bg-white rounded-[12px] p-5 sm:p-10 flex flex-col items-center">
+                <div className="w-full sm:h-full flex justify-around items-center">
                   <div className="max-w-[206px] min-h-[64px] flex flex-col items-start gap-1 ">
                     <h3 className="text-black text-[22px] font-medium leading-[140%] ">Guru Ragav Auditor</h3>
                     <p className="text-[#b0b0b0] font-[400] text-[18px] leading-[140%]">Auditor</p>
@@ -644,8 +644,8 @@ export default function Home() {
               </div>
 
               {/* Card 2 */}
-              <div className="max-w-[413px] min-h-[288px] bg-white rounded-[12px] p-10 flex flex-col items-center">
-                <div className="min-w-[413px] h-full flex justify-around items-center">
+              <div className="sm:max-w-[413px] sm:min-h-[288px] h-auto w-[90%]  bg-white rounded-[12px] p-5 sm:p-10 flex flex-col items-center">
+                <div className="w-full sm:h-full flex justify-around items-center">
                   <div className="max-w-[206px] min-h-[64px] flex flex-col items-start gap-1">
                     <h3 className="text-black text-[22px] font-medium leading-[140%]">Cristian Rama</h3>
                     <p className="text-[#b0b0b0] font-[400] text-[18px] leading-[140%]">Architect</p>
@@ -663,8 +663,8 @@ export default function Home() {
               </div>
 
               {/* Card 3 */}
-              <div className="max-w-[413px] min-h-[288px] bg-white rounded-[12px] p-10 flex flex-col items-center">
-                <div className="min-w-[413px] h-full flex justify-around items-center">
+              <div className="sm:max-w-[413px] sm:min-h-[288px] h-auto w-[90%]  bg-white rounded-[12px] p-5 sm:p-10 flex flex-col items-center">
+                <div className="w-full sm:h-full flex justify-around items-center">
                   <div className="max-w-[206px] min-h-[64px] flex flex-col items-start gap-1">
                     <h3 className="text-black text-[22px] font-medium leading-[140%]">Ram Krishnan</h3>
                     <p className="text-[#b0b0b0] font-[400] text-[18px] leading-[140%]">Architect</p>
