@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 export default function Footer() {
   return (
-    <footer className="w-full p-3 sm:p-0 h-auto bg-white flex justify-center items-center flex-col mt-20 shadow-lg">
+    <footer className="w-full h-auto bg-white flex justify-center items-center flex-col mt-20 shadow-lg">
       {/* <div className="w-full h-[2px] border-black bg-[#2a2a2a] rounded-[2px] mb-14"></div> */}
       <div className="max-w-full mx-auto grid lg:grid-cols-4 md:grid-cols-2 lg:mx-20 md:mx-12 sm:mx-10 sm:mx-0 gap-10">
         <div className="mr-5">
@@ -105,7 +105,7 @@ export default function Footer() {
 
       <div className="w-[1300px] h-[2px] flex justify-center items-center bg-[#007B8233] sm:m-5 m-10"></div>
 
-      <div className="text-center text-[#B0B0B0] text-[12px] leading-[16px] text-xs mt-4 mb-10">
+      <div className="text-center text-[#007B82] text-[16px] leading-[16px] tracking-[0.26px] text-xs mt-4 mb-10">
         &copy; 2023 Stackly AI | All Rights Reserved
       </div>
     </footer>

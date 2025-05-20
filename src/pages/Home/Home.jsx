@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Form from "./Form";
+import GalleryHover from "../../components/GalleryHover";
+import { useAnimation } from "../../components/AnimatedDesignSection";
 import sec3Pattern1 from "../../assets/home/sec3/arcticons_ai-chat-alt-1.png";
 import sec3Pattern2 from "../../assets/home/sec3/arcticons_ai-chat-alt-2.png";
 import sec3Pattern3 from "../../assets/home/sec3/material-icon-theme_gemini-ai.png";
@@ -23,14 +25,14 @@ import sec5Frame6 from "../../assets/home/sec5/Frame 180.png";
 import sec5Frame7 from "../../assets/home/sec5/Frame 183.png";
 import sec5Frame8 from "../../assets/home/sec5/Frame 184.png";
 
-import sec6Img1 from "../../assets/home/sec6/1.png";
-import sec6Img2 from "../../assets/home/sec6/2.png";
-import sec6Img3 from "../../assets/home/sec6/3.png";
-import sec6Img4 from "../../assets/home/sec6/4.png";
-import sec6Img5 from "../../assets/home/sec6/1 (1).png";
-import sec6Img6 from "../../assets/home/sec6/2 (1).png";
-import sec6Img7 from "../../assets/home/sec6/3 (1).png";
-import sec6Img8 from "../../assets/home/sec6/4 (1).png";
+import img1 from "../../assets/home/sec6/1.png";
+import img2 from "../../assets/home/sec6/2.png";
+import img3 from "../../assets/home/sec6/3.png";
+import img4 from "../../assets/home/sec6/4.png";
+import img5 from "../../assets/home/sec6/1 (1).png";
+import user6 from "../../assets/home/sec6/2 (1).png";
+import user7 from "../../assets/home/sec6/3 (1).png";
+import user8 from "../../assets/home/sec6/4 (1).png";
 import sec6Logo from "../../assets/home/sec6/Logo.png";
 
 import sec9Frame from "../../assets/home/sec9/Frame 168.png";
@@ -51,10 +53,28 @@ import HeroBanner from "./HeroBanner";
 import DraggableImageSection from "./DraggableImageSection";
 import ImageSlider from "./ImageSlider";
 import StepsHome from './StepsHome';
+import Star from "../../assets/home/star.png"
+import Reacts from "../../assets/home/react.png"
+import Stars from "../../assets/home/stars.png"
+import Magic from "../../assets/product-pg/magic.png"
 
+
+
+
+
+//export default function Home() {
 export default function Home() {
-  
-
+  const frameImages = [
+  "/home/sec5/frame1.png",
+  "/home/sec5/frame2.png",
+  "/home/sec5/frame3.png",
+  "/home/sec5/frame4.png",
+  "/home/sec5/frame5.png",
+  "/home/sec5/frame6.png",
+  "/home/sec5/frame7.png",
+  "/home/sec5/frame8.png",
+]; 
+  const { sectionRef, animations } = useAnimation();
   const faqs = [
     {
       question: "What is Stackly AI?",
@@ -87,21 +107,31 @@ export default function Home() {
 
       {/* section 2 */}
 
-      <section className="max-w-[100vw] w-full min-h-[552px] flex flex-col justify-center items-center gap-5 p-[30px] max-[500px]:py -10 max-[500px]:min-h-0">
+      <section className="max-w-[100vw] w-full min-h-[552px] flex flex-col justify-center items-center gap-5 p-[30px] max-[500px]:py -10 max-[500px]:min-h-0 bg-gradient-to-l from-[#00B0BA14] to-[#00B0BA00]">
         <h1 className="max-w-[220px] w-full min-h-[46px] text-[40px] font-black  leading-[100%] text-[#2a2a2a] text-center">
           STACKLY AI
         </h1>
-        <h2 className="max-w-[951px] w-full min-h-[53px] text-[44px] font-semibold leading-[100%] text-center text-[#007B82]">
+        <h2 className="max-w-[979px] w-full min-h-[63px] text-[52px] font-bold leading-[100%] text-center text-[#007B82] flex gap-[10px] ">
+          <img src={Stars} alt="stars" className='w-[50px] h-[50px]' />
           Smart, fast, and built for excellence.
         </h2>
-        <p className="max-w-[839px] w-full min-h-[76px] text-[20px] font-normal leading-[100%] h-[38px] text-center text-[#B0B0B0]">
+        <p className="max-w-[839px] w-full min-h-[76px] text-[20px] font-normal leading-[38px]  h-[38px] text-center text-[#B0B0B0]">
           Delivering rapid, photo-realistic designs with advanced AI
           technology—trusted by professionals and homeowners alike.
         </p>
+       
       </section>
+      <div className='absolute'>
+        <img src={Star} alt="" className='relative top-[-120px] left-[60px]'/>
+        <img src={Star} alt="" className='relative top-[-130px] left-[100px] w-[30px]'/>
+        <img src={Star} alt="" className='relative top-[-570px] left-[1400px]' />
+        <img src={Star} alt="" className='relative top-[-580px] left-[1440px] w-[30px]' />
+        <img src={Reacts} alt="" className='relative top-[-670px] left-[20px]' />
+        <img src={Reacts} alt="" className='relative top-[-370px] left-[1400px]' />
+      </div>
 
       {/* section 3 */}
-      <section className="w-full min-h-[1394px]">
+      {/* <section className="w-full min-h-[1394px]">
         <div className="w-full min-h-[1394px] bg-[#002628]">
           <div className="home-bg-img relative w-full min-h-[1371px] overflow-hidden px-[5%] py-[100px]">
             <img
@@ -196,17 +226,110 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+      <section className="w-full min-h-[1394px]" ref={sectionRef}>
+  <div className="w-full min-h-[1394px] bg-[#002628]">
+    <div className="home-bg-img relative w-full min-h-[1371px] overflow-hidden px-[5%] py-[100px]">
+      {/* Background images */}
+      <img
+        src={sec3Pattern1}
+        alt=""
+        className="absolute w-[240px] h-[240px] top-0 left-0 mix-blend-overlay"
+      />
+      <img
+        src={sec3Pattern2}
+        alt=""
+        className="absolute w-[60px] h-[60px] top-[554px] left-[1080px] mix-blend-overlay"
+      />
+      <img
+        src={sec3Pattern3}
+        alt=""
+        className="absolute w-[44px] h-[44px] top-[747px] left-[260px]"
+      />
+      <img
+        src={sec3Pattern4}
+        alt=""
+        className="absolute w-[44px] h-[44px] top-[932px] left-[70%]"
+      />
+
+      <h1 className="text-[40px] font-bold text-white text-center mb-5">
+        Ultimate{" "}
+        <span className="text-[#00D1DD] opacity-100">AI Design Tool</span>{" "}
+        for Interiors & Exteriors
+      </h1>
+      <p className="text-[22px] font-medium text-white text-center">
+        Transform Any Space Effortlessly
+      </p>
+
+      <div className="w-full mt-[100px] relative min-h-[1050px]">
+        {/* Left design - comes from left */}
+        <div
+          className={`flex items-center justify-center gap-5 absolute left-5 top-5 max-[600px]:static max-[600px]:flex-col max-[600px]:p-3 transition-all duration-1000 ease-out ${
+            animations?.leftVisible
+              ? "translate-x-0 opacity-100"
+              : "-translate-x-[100%] opacity-0"
+          }`}
+        >
+          <p className="rounded-full text-[22px] font-semibold text-black bg-white p-5 whitespace-nowrap">
+            AI-Powered Interior Designs
+          </p>
+          <img
+            className="w-full max-w-[400px] max-h-[400px] rounded-[50%] border-8 border-solid border-white"
+            src={sec3Design1}
+            alt="Interior design"
+          />
+        </div>
+
+        {/* Center design - comes from right */}
+        <div
+          className={`flex items-center justify-center gap-5 absolute right-5 top-[300px] max-[600px]:static max-[600px]:flex-col max-[600px]:p-3 transition-all duration-1000 ease-out ${
+            animations?.centerVisible
+              ? "translate-x-0 opacity-100"
+              : "translate-x-[100%] opacity-0"
+          }`}
+        >
+          <img
+            className="w-full max-w-[400px] max-h-[400px] rounded-[50%] border-8 border-solid border-white"
+            src={sec3Design2}
+            alt="Exterior design"
+          />
+          <p className="rounded-full text-[22px] font-semibold text-black bg-white p-5 whitespace-nowrap">
+            Stunning Exterior Makeovers
+          </p>
+        </div>
+
+        {/* Right design - comes from left */}
+        <div
+          className={`flex items-center justify-center gap-5 absolute left-5 top-[600px] max-[600px]:static max-[600px]:flex-col max-[600px]:p-3 transition-all duration-1000 ease-out ${
+            animations?.rightVisible
+              ? "translate-x-0 opacity-100"
+              : "-translate-x-[100%] opacity-0"
+          }`}
+        >
+          <p className="rounded-full text-[22px] font-semibold text-black bg-white p-5 whitespace-nowrap">
+            Outdoor Spaces Reimagined
+          </p>
+          <img
+            className="w-full max-w-[400px] max-h-[400px] rounded-[50%] border-8 border-solid border-white"
+            src={sec3Design3}
+            alt="Outdoor design"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Section 4 */}
 
-      <section className="max-[500px]:p-5 max-w-[100vw] w-full min-h-[983px] overflow-x-hidden flex justify-center items-center p-[50px]">
-        <div className="max-w-[1279px] w-full min-h-[778px] bg-white shadow-[0px_0px_5px_2px_#00000040] flex flex-col justify-center items-center gap-10 px-5 py-10 rounded-[15px]">
-          <p className="max-w-[951px] w-full min-h-[29px] text-[28px] font-semibold leading-[100%] text-center text-[#007B82]">
+      <section className="max-[500px]:p-5 max-w-[100vw] w-full min-h-[983px] overflow-x-hidden flex justify-center items-center p-[50px] bg-gradient-to-l from-[#00B0BA14] to-[#00B0BA00]">
+        <div className="max-w-[1279px] w-full min-h-[778px] bg-white  flex flex-col justify-center items-center gap-10 px-5 py-10 rounded-[15px] bg-gradient-to-l from-[#00B0BA14] to-[#00B0BA00]">
+          <p className="max-w-[951px] w-full min-h-[29px] text-[24px] font-[400] leading-[100%] text-center text-[#2a2a2a]">
             First-of-Its-Kind Features
           </p>
-          <h2 className="max-w-[820px] w-full min-h-[53px] text-[44px] font-bold leading-[100%] text-center text-black">
-            The <span className="text-[#007B82]">All You Need</span> AI Home
+          <h2 className="max-w-[951px] w-full min-h-[48px] text-[40px] font-bold leading-[100%] text-center text-black">
+            The <span className="text-[#009A98]">All You Need</span> AI Home
             Design Tool
           </h2>
 
@@ -215,12 +338,12 @@ export default function Home() {
               <img
                 src={sec4Icon1}
                 alt="icon1"
-                className="max-w-[100px] w-full min-h-[100px]"
+                className="max-w-[100px] w-full min-h-[100px] border-[1px] border-solid border-white shadow-md rounded-[50%]"
               />
-              <h3 className="max-w-[211px] w-full min-h-[48px] text-[20px] font-semibold leading-[100%] text-center text-[#2a2a2a]">
+              <h3 className="max-w-[211px] w-full min-h-[48px] text-[24px] font-semibold leading-[100%] text-center text-[#2a2a2a]">
                 Interior & Exterior Image Generation
               </h3>
-              <p className="max-w-[250px] w-full min-h-[102px] text-[17px] leading-[34px] font-medium h-[34px] text-center text-[#b0b0b0]">
+              <p className="max-w-[250px] w-full min-h-[102px] text-[16px] leading-[24px] font-medium leading-[100%] h-[34px] text-center text-[#b0b0b0]">
                 Get design ideas for every part of your home—both indoors and
                 outdoors.
               </p>
@@ -230,27 +353,27 @@ export default function Home() {
               <img
                 src={sec4Icon2}
                 alt="icon1"
-                className="max-w-[100px] w-full min-h-[100px]"
+                className="max-w-[100px] w-full min-h-[100px] border-[1px] border-solid border-white shadow-md rounded-[50%]"
               />
-              <h3 className="max-w-[211px] text-[20px] w-full min-h-[48px]  font-semibold leading-[100%] text-center text-[#2a2a2a]">
+              <h3 className="max-w-[211px] text-[24px] w-full min-h-[48px]  font-semibold leading-[100%] text-center text-[#2a2a2a]">
                 Unlimited AI Ideas
               </h3>
-              <p className="max-w-[250px] w-full min-h-[102px] text-[17px] font-medium leading-[100%] h-[34px] text-center text-[#b0b0b0]">
+              <p className="max-w-[250px] w-full min-h-[102px] leading-[24px] text-[16px] font-medium leading-[100%] h-[34px] text-center text-[#b0b0b0]">
                 Generate endless creative ideas to transform any space with
                 ease.
               </p>
             </div>
 
-            <div className="max-w-[250px] w-full min-h-[310px] flex flex-col justify-center items-center gap-5">
+            <div className="max-w-[250px] w-full min-h-[310px]  flex flex-col justify-center items-center gap-5">
               <img
                 src={sec4Icon3}
                 alt="icon1"
-                className="max-w-[100px] w-full min-h-[100px]"
+                className="max-w-[100px] w-full min-h-[100px] border-[1px] border-solid border-white shadow-md rounded-[50%]"
               />
-              <h3 className="max-w-[211px] w-full min-h-[48px] text-[20px] font-semibold leading-[100%] text-center text-[#2a2a2a]">
+              <h3 className="max-w-[211px] w-full min-h-[48px] text-[24px] font-semibold leading-[100%] text-center text-[#2a2a2a]">
                 High-Resolution Images
               </h3>
-              <p className="max-w-[250px] w-full min-h-[102px] text-[17px] font-medium leading-[100%] h-[34px] text-center text-[#b0b0b0]">
+              <p className="max-w-[250px] w-full min-h-[102px] leading-[24px] text-[16px] font-medium leading-[100%] h-[34px] text-center text-[#b0b0b0]">
                 Download crystal-clear, AI-generated images that capture every
                 detail.
               </p>
@@ -260,37 +383,47 @@ export default function Home() {
               <img
                 src={sec4Icon4}
                 alt="icon1"
-                className="max-w-[100px] w-full min-h-[100px]"
+                className="max-w-[100px] w-full min-h-[100px] border-[1px] border-solid border-white shadow-md rounded-[50%]"
               />
-              <h3 className="max-w-[211px] w-full min-h-[48px] text-[20px] font-semibold leading-[100%] text-center text-[#2a2a2a]">
+              <h3 className="max-w-[211px] w-full min-h-[48px] text-[24px] font-semibold leading-[100%] text-center text-[#2a2a2a]">
                 Fast Image Generation
               </h3>
-              <p className="max-w-[250px] w-full min-h-[102px] text-[17px] font-medium leading-[100%] h-[34px] text-center text-[#b0b0b0]">
+              <p className="max-w-[250px] w-full min-h-[102px] leading-[24px] text-[16px] font-medium leading-[100%] h-[34px] text-center text-[#b0b0b0]">
                 Create stunning, AI-powered images in just seconds.
               </p>
             </div>
           </div>
-          <div className="max-w-[406px] w-full min-h-[60px] flex justify-center items-center rounded-[5px] hover:bg-[#4bb0b5]
+          <div className="max-w-[846px] w-full min-h-[65px] flex justify-center items-center rounded-[5px] hover:bg-[#4bb0b5]
           "style={{
                       background:
                         "linear-gradient(to right, rgb(0, 176, 186) 0%, rgba(0, 0, 0) 50%, rgb(0, 176, 186) 100%)",
                     }}
           >
             <p
-              className="max-w-[137px] w-full min-h-[35px] text-xl font-bold leading-[100%] h-[35px] pt-[8px] text-center text-white no-underline"
+              className="max-w-[464px] w-full min-h-[65px] text-xl font-bold leading-[100%]  text-center text-white no-underline flex justify-center items-center gap-[10px] cursor-pointer"
               style={{ wordSpacing: "2px" }}
               
             >
-              Generate now
+              <img src={Magic} alt="" className='w-30px h-[30px]' />
+              Generate Design
             </p>
           </div>
         </div>
       </section>
 
+      <div className='absolute'>
+        <img src={Star} alt="" className='relative top-[-120px] left-[1410px]'/>
+        <img src={Star} alt="" className='relative top-[-190px] left-[1390px] w-[30px]'/>
+        <img src={Star} alt="" className='relative top-[-1000px] left-[50px]' />
+        <img src={Star} alt="" className='relative top-[-1000px] left-[90px] w-[30px]' />
+        {/* <img src={Reacts} alt="" className='relative top-[-670px] left-[20px]' />
+        <img src={Reacts} alt="" className='relative top-[-370px] left-[1400px]' /> */}
+      </div>
+
       {/* Section 5 */}
-      <section
-        className="  relative w-full min-[500px]:min-h-[1116px] bg-center object-cover bg-cover bg-no-repeat bg-scroll overflow-hidden"
-        style={{ backgroundImage: "url('/home/sec5/banner.png')" }}
+      {/* <section
+        className="  relative w-full min-[500px]:min-h-[1116px] bg-center object-cover bg-cover bg-no-repeat bg-scroll  overflow-hidden"
+        style={{ backgroundImage: "url('/home/sec5/banner.jpg')" }}
       >
         <div className="w-full min-h-[896px] flex flex-col justify-center items-center gap-[30px]">
           <h1 className="max-w-[688px] w-full min-h-[67px] text-5xl font-semibold leading-[100%] h-[140%] text-center text-white">
@@ -328,11 +461,23 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
+       <GalleryHover
+      sec5BlockImg={sec5BlockImg}
+      sec5Frame1={sec5Frame1}
+      sec5Frame2={sec5Frame2}
+      sec5Frame3={sec5Frame3}
+      sec5Frame4={sec5Frame4}
+      sec5Frame5={sec5Frame5}
+      sec5Frame6={sec5Frame6}
+      sec5Frame7={sec5Frame7}
+      sec5Frame8={sec5Frame8}
+    />
 
       {/* Section 6 */}
 
-      <section className="min-h-[500px]">
+      {/* <section className="min-h-[500px]">
         <div className="h-[500px] max-[1000px]:flex-col flex justify-center items-center">
           <div className="max-w-[400px] min-h-[165px] text-center flex flex-col justify-center items-center">
             <div className="flex justify-center items-center relative left-[60px]">
@@ -358,6 +503,9 @@ export default function Home() {
               <span className="min-w-[185px] text-center text-[28px] font-medium leading-[100%] text-[#2A2A2A]">
                 Design Styles
               </span>
+            </div>
+            <div>
+              We blend AI intelligence with diverse design trends to deliver spaces you'll love
             </div>
           </div>
 
@@ -392,6 +540,72 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section> */}
+<section className="w-full min-h-[925px] bg-white py-16 px-4 flex flex-col justify-center items-center gap-[100px]">
+      <div className="max-w-6xl mx-auto ">
+        {/* Title */}
+        <h2 className="text-center text-[#007B82] text-2xl md:text-3xl text-[40px] leading-[140%] font-semibold mb-16">
+          Our Design Range, Trusted Worldwide
+        </h2>
+
+        {/* First Row */}
+        <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-6 mb-16">
+          {/* Images */}
+          <div className="flex justify-center md:justify-start -space-x-4">
+            {[img1, img2, img3, img4].map((src, idx) => (
+              <img
+                key={idx}
+                src={src}
+                alt={`Design ${idx + 1}`}
+                className="w-[88px] h-[88px] rounded-full border-2 border-white object-cover"
+              />
+            ))}
+          </div>
+
+          {/* Middle - Stat */}
+          <div className="text-center">
+            <p className="text-3xl font-bold text-teal-700 text-[82px] mb-[30px]">45+</p>
+            <p className="text-gray-800 font-medium text-[32px]">Design Styles</p>
+          </div>
+
+          {/* Right - Text */}
+          <div className="text-center text-[black] text-[28px] leading-[140%]">
+            <p>We blend AI intelligence with diverse design trends to deliver spaces you'll love</p>
+          </div>
+        </div>
+
+        {/* Second Row */}
+        <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-6">
+          {/* Left - Text */}
+          <div className=" text-[black] text-[28px] leading-[140%] text-center">
+            <p>Join a growing community of users transforming their spaces with AI-powered design</p>
+          </div>
+
+          {/* Middle - User Images */}
+          <div className="flex justify-center -space-x-4">
+            {[img5, user6, user7, user8].map((src, idx) => (
+              <img
+                key={idx}
+                src={src}
+                alt={`User ${idx + 1}`}
+                className="w-[88px] h-[88px] rounded-full border-2 border-white object-cover"
+              />
+            ))}
+          </div>
+
+          {/* Right - Stat */}
+          <div className="text-center">
+            <p className="text-[82px] font-bold text-teal-700">100+</p>
+            <p className="text-gray-800 font-medium text-center text-[32px]">Happy Users</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+      <section>
+         
       </section>
 
       {/* Section 7 */}
@@ -463,7 +677,7 @@ export default function Home() {
 
       {/* Section 10 */}
 
-      <section className="max-w-[100vw] min-h-[926px] flex flex-col justify-center items-center gap-[30px]">
+      {/* <section className="max-w-[100vw] min-h-[926px] flex flex-col justify-center items-center gap-[30px]">
         <h1 className="max-w-[1320px] min-h-[67px] w-full text-[48px] font-semibold leading-[140%] text-center text-black">
           Compare Design, Find Your{" "}
           <span className="text-[#007B82]">Perfect style</span>
@@ -504,6 +718,78 @@ export default function Home() {
             </p>
           </div>
         </div>
+      </section> */}
+      <section className="max-w-[100vw] min-h-[926px] flex flex-col justify-center items-center gap-[30px]">
+        <h1 className="max-w-[1320px] min-h-[67px] w-full text-[48px] font-semibold leading-[140%] text-center text-black">
+          Compare Design, Find Your{" "}
+          <span className="text-[#007B82]">Perfect style</span>
+        </h1>
+        <p className="max-w-[736px] w-full min-h-[72px] text-lg font-semibold leading-[200%] text-center text-[#B0B0B0]">
+          Explore and compare multiple interior, exterior, and outdoor designs
+          to discover the one that matches your unique taste.
+        </p>
+        {/* <div className="flex justify-center items-center max-[1000px]:flex-wrap gap-2.5 p-5">
+          <div className="max-w-[577px]  flex flex-col justify-center items-center gap-6 bg-[white] shadow-[0_0_4px_0_#00000040] px-[18px] py-[30px] rounded-[10px]">
+            <img
+              className="max-w-[541px]  w-full"
+              src={sec10Img1}
+              alt="image1"
+            />
+            <p className="max-w-[541px] min-h-[72px] w-full text-center text-[17px] font-semibold leading-[140%] text-black">
+              <span className="text-[#007B82]">
+                "Your style is sleek and sophisticated.{" "}
+              </span>
+              This brown-themed office design blends modern functionality with
+              warm, earthy tones—perfect for a productive and stylish
+              workspace."
+            </p>
+          </div>
+
+          <div className="max-w-[577px]  flex flex-col justify-center items-center gap-6 bg-[white] shadow-[0_0_4px_0_#00000040] px-[18px] py-[30px] rounded-[10px]">
+            <img
+              className="max-w-[541px]  w-full"
+              src={sec10Img2}
+              alt="image2"
+            />
+            <p className="max-w-[541px] min-h-[72px] w-full text-center text-[17px] font-semibold leading-[140%] text-black">
+              <span className="text-[#007B82]">
+                "Embrace comfort with a touch of elegance.
+              </span>{" "}
+              This brown-themed lounge offers a cozy yet professional
+              atmosphere, balancing work and relaxation effortlessly."
+            </p>
+          </div>
+        </div> */}
+           <div className="flex justify-center items-center max-[1000px]:flex-wrap gap-5 p-5">
+  {[{
+    img: sec10Img1,
+    text: `"Your style is sleek and sophisticated. This brown-themed office design blends modern functionality with warm, earthy tones—perfect for a productive and stylish workspace."`
+  },
+  {
+    img: sec10Img2,
+    text: `"Embrace comfort with a touch of elegance. This brown-themed lounge offers a cozy yet professional atmosphere, balancing work and relaxation effortlessly."`
+  }].map((item, index) => (
+    <div
+      key={index}
+      className="group max-w-[577px] w-full bg-white shadow-[0_0_4px_0_#00000040] rounded-[10px] overflow-hidden transition-all duration-500"
+    >
+      <div className="overflow-hidden">
+        <img
+          src={item.img}
+          alt={`image${index}`}
+          className="w-full max-w-[541px] transition-transform duration-500 group-hover:scale-105"
+        />
+      </div>
+
+      <div className="max-h-0 opacity-0 group-hover:max-h-[400px] group-hover:opacity-100 transition-all duration-500 ease-in-out p-5">
+        <p className="text-center text-[17px] font-semibold leading-[140%] text-black">
+          <span className="text-[#007B82]">{item.text.split(".")[0]}.</span>
+          {item.text.slice(item.text.indexOf(".") + 1)}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
       </section>
 
       {/* {section:11} */}
@@ -624,8 +910,8 @@ export default function Home() {
             {/* Member Cards */}
             <div className="w-[100vw] flex justify-center item-center flex-wrap gap-10">
               {/* Card 1 */}
-              <div className="sm:max-w-[413px] sm:min-h-[288px] h-auto w-[90%] bg-white rounded-[12px] p-5 sm:p-10 flex flex-col items-center">
-                <div className="w-full sm:h-full flex justify-around items-center">
+              <div className="max-w-[413px] min-h-[288px] bg-white rounded-[12px] p-10 flex flex-col items-center">
+                <div className="min-w-[413px] h-full flex justify-around items-center">
                   <div className="max-w-[206px] min-h-[64px] flex flex-col items-start gap-1 ">
                     <h3 className="text-black text-[22px] font-medium leading-[140%] ">Guru Ragav Auditor</h3>
                     <p className="text-[#b0b0b0] font-[400] text-[18px] leading-[140%]">Auditor</p>
@@ -644,8 +930,8 @@ export default function Home() {
               </div>
 
               {/* Card 2 */}
-              <div className="sm:max-w-[413px] sm:min-h-[288px] h-auto w-[90%]  bg-white rounded-[12px] p-5 sm:p-10 flex flex-col items-center">
-                <div className="w-full sm:h-full flex justify-around items-center">
+              <div className="max-w-[413px] min-h-[288px] bg-white rounded-[12px] p-10 flex flex-col items-center">
+                <div className="min-w-[413px] h-full flex justify-around items-center">
                   <div className="max-w-[206px] min-h-[64px] flex flex-col items-start gap-1">
                     <h3 className="text-black text-[22px] font-medium leading-[140%]">Cristian Rama</h3>
                     <p className="text-[#b0b0b0] font-[400] text-[18px] leading-[140%]">Architect</p>
@@ -663,8 +949,8 @@ export default function Home() {
               </div>
 
               {/* Card 3 */}
-              <div className="sm:max-w-[413px] sm:min-h-[288px] h-auto w-[90%]  bg-white rounded-[12px] p-5 sm:p-10 flex flex-col items-center">
-                <div className="w-full sm:h-full flex justify-around items-center">
+              <div className="max-w-[413px] min-h-[288px] bg-white rounded-[12px] p-10 flex flex-col items-center">
+                <div className="min-w-[413px] h-full flex justify-around items-center">
                   <div className="max-w-[206px] min-h-[64px] flex flex-col items-start gap-1">
                     <h3 className="text-black text-[22px] font-medium leading-[140%]">Ram Krishnan</h3>
                     <p className="text-[#b0b0b0] font-[400] text-[18px] leading-[140%]">Architect</p>

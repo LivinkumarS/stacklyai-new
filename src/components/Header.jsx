@@ -11,7 +11,7 @@ export default function Header() {
 
   return (
     <div>
-      <header className="w-full  h-[70px] sm:h-[90px] bg-white flex justify-between items-center backdrop-blur-[6px] xl:px-20 xl:py-[25px] md:p-[20px] p-[15px] relative z-10 gap-0">
+      <header className="w-full  h-[70px] sm:h-[90px] bg-white flex justify-between items-center backdrop-blur-[6px] xl:px-20 xl:py-[25px] md:p-[20px] p-[15px] relative z-10 gap-0 shadow-sm">
         <img
           className="cursor-pointer max-[400px]:w-[50%]"
           onClick={() => {
@@ -52,7 +52,7 @@ export default function Header() {
             <li>
               <NavLink
                 className="text-[20px] font-bold text-[#2a2a2a] cursor-pointer no-underline leading-[100%] hover:text-[#007b82] NavLink visited:font-bold"
-                to="/api"
+                to="/Api"
               >
                 API
               </NavLink>
@@ -163,9 +163,10 @@ export default function Header() {
               </NavLink>
               <NavLink
                 to={"/sign-up"}
-                className="w-[107px] h-[39px] text-[20px] font-semibold leading-[100%] border bg-[#007b82] text-white cursor-pointer flex justify-center items-center no-underline rounded-[5px] border-solid border-white active:bg-white active:text-[#007b82]"
+                className="w-[107px] h-[39px] text-[20px] font-semibold leading-[100%] border bg-[#007b82] text-white cursor-pointer flex justify-center items-center no-underline rounded-[5px] border-solid border-white active:bg-white active:text-[white] focus:text-white"
               >
-                Sign Up
+                <div className="text-[white]">
+                Sign Up</div>
               </NavLink>
             </div>
           )}
@@ -233,7 +234,7 @@ export default function Header() {
 
         <NavLink
           className="text-[20px] font-bold text-[#2a2a2a] cursor-pointer no-underline leading-[100%] hover:text-[#007b82] NavLink visited:font-bold"
-          to="/api"
+          to="/Api"
           onClick={() => {
             setShowSideBar(false);
           }}
@@ -243,7 +244,7 @@ export default function Header() {
 
         <NavLink
           className="text-[20px] font-bold text-[#2a2a2a] cursor-pointer no-underline leading-[100%] hover:text-[#007b82] NavLink visited:font-bold"
-          to="/contact"
+          to="/Contact"
           onClick={() => {
             setShowSideBar(false);
           }}
