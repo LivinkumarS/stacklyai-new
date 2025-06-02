@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -16,27 +16,66 @@ import HeroForgetPg from "./pages/forgetPage/HeroForgetPg";
 import Otp from "./pages/forgetPage/Otp";
 import ResetPassword from "./pages/forgetPage/ResetPassword";
 import ResetPopup from "./pages/forgetPage/ResetPopup";
-
-
+import Billing from "./pages/PricingPage/Billing";
+import Payment from "./pages/PricingPage/Payment";
+import UiPlans from "./pages/PricingPage/UiPlans";
+import Pay from "./pages/PricingPage/Pay";
+import ConformationPage from "./pages/PricingPage/ConformationPage";
+import Profile from "./pages/Profile/Profile";
+import AfterHome from "./pages/AfterSignHome/AfterHome";
+import Form from "./pages/Home/Form";
+import HeroProfile from "./pages/Profile/HeroProfile";
+import Myplan from "./pages/Profile/Myplan";
+import Mybilling from "./pages/Profile/Mybilling";
+import HelpCenter from "./pages/Profile/HelpCenter";
+import ExteriorForm from "./pages/AfterSignHome/ExteriorForm";
+import OutdoorForm from "./pages/AfterSignHome/OutdoorForm";
+import FormAfter from "./pages/AfterSignHome/FormAfter";
+import { UserContext } from "./context/UserContext";
+import CarouselProducts from "./pages/Products/CarouselProducts";
 
 export default function App() {
+  const { userInfo } = useContext(UserContext);
   return (
     <div className="overflow-x-hidden">
-      <Header/>
-      
+      <Header />
+
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/Api" element={<Api/>}/>
-        <Route path="/Pricing" element={<Pricing/>}/>
-        <Route path="/Contact" element={<Contact/>}/>
-        <Route path="/HeroForgetPg" element={<HeroForgetPg/>}/>
-        <Route path="/Otp" element={<Otp/>}/>
-        <Route path="/ResetPassword" element={<ResetPassword/>}/>
-        <Route path="/ResetPopup" element={<ResetPopup/>}/>
-        <Route path="/ForgetPg" element={<ForgetPg/>}/>
+        {userInfo.userId ? (
+          <Route path="/" element={<AfterHome />} />
+        ) : (
+          <Route path="/" element={<Home />} />
+        )}
+        {userInfo.userId ? (
+          <Route path="/products" element={<CarouselProducts />} />
+        ) : (
+          <Route path="/products" element={<Products />} />
+        )}
+        
+        <Route path="/Api" element={<Api />} />
+        <Route path="/Pricing" element={<Pricing />} />
+        <Route path="/Billing" element={<Billing />} />
+        <Route path="/UiPlans" element={<UiPlans />} />
+        <Route path="/Pay" element={<Pay />} />
+        <Route path="/ConformationPage" element={<ConformationPage />} />
+        <Route path="/Payment" element={<Payment />} />
+        <Route path="/Contact" element={<Contact />} />
+        <Route path="/HeroForgetPg" element={<HeroForgetPg />} />
+        <Route path="/Otp" element={<Otp />} />
+        <Route path="/Form" element={<Form />} />
+        <Route path="/ResetPassword" element={<ResetPassword />} />
+        <Route path="/ResetPopup" element={<ResetPopup />} />
+        <Route path="/ForgetPg" element={<ForgetPg />} />
         <Route path="/sign-in" element={<SignIn />} />
-        <Route path="/sign-up" element={<SignUp/>}/>
+        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/Profile" element={<Profile />} />
+        <Route path="/HeroProfile" element={<HeroProfile />} />
+        <Route path="/Myplan" element={<Myplan />} />
+        <Route path="/Mybilling" element={<Mybilling />} />
+        <Route path="/HelpCenter" element={<HelpCenter />} />
+        <Route path="/ExteriorForm" element={<ExteriorForm />} />
+        <Route path="/OutdoorForm" element={<OutdoorForm />} />
+        <Route path="/FormAfter" element={<FormAfter />} />
       </Routes>
 
       <Footer />

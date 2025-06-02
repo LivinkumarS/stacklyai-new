@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-const SlideInView = ({ children, delay = 0, onInView }) => {
+export default function SlideInView({ children, delay = 0, onInView }){
   const { ref, inView } = useInView({
     threshold: 0.5,
     triggerOnce: false,
@@ -15,13 +15,13 @@ const SlideInView = ({ children, delay = 0, onInView }) => {
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 300 }}
-      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 300 }}
+      initial={{ opacity: 0, y: 100 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
       transition={{ duration: 0.8, delay }}
     >
       {children}
     </motion.div>
   );
-};
+}; 
 
-export default SlideInView;
+// export default SlideInView;
