@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import DragSize from "./../../assets/product-pg/dragsize.png";
 import Search from "./../../assets/product-pg/search.png";
@@ -15,19 +15,17 @@ import DraggableImages from "../../components/DraggableImages";
 import Banner from "../../assets/product-pg/bannercode.png";
 import Banner1 from "../../assets/product-pg/bannercode1.png";
 import Star from "../../assets/product-pg/star.png";
+import { FormDataContext } from "../../context/FormDataContext";
 
-export default function DraggableImagesProducts() {
+export default function AfterDraggableImagesProducts() {
+
   const navigate = useNavigate();
+  const { setImgURL, setFormData } =
+    useContext(FormDataContext);
+
   const [fullscreenImage, setFullscreenImage] = useState(null);
   const [popupImage, setPopupImage] = useState(null);
-  const [showOriginal, setShowOriginal] = useState({
-    livingRoom: true,
-    kitchen: true,
-    kidsRoom: true,
-    diningRoom: true,
-    laundryRoom: true,
-    studyRoom: true,
-  });
+
 
   const handleFullscreen = (image) => {
     setFullscreenImage(image);
@@ -43,23 +41,13 @@ export default function DraggableImagesProducts() {
   };
 
   const handleInputRedirect = (roomType, originalImage) => {
-    navigate("/products", {
-      state: {
-        scrollToForm: true,
-        selectedRoom: roomType,
-        originalImage: originalImage,
-      },
-      replace: true,
+    setFormData((prev) => {
+      return { ...prev, roomType: roomType };
     });
+    setImgURL(originalImage);
   };
 
-  const toggleOriginalImage = (room, originalImage) => {
-    setPopupImage(originalImage);
-    setShowOriginal((prev) => ({
-      ...prev,
-      [room]: !prev[room],
-    }));
-  };
+
 
   const RoomCard = ({ roomName, originalImage, transformedImage, roomKey }) => (
     <div className="max-w-[522px] m-auto w-full h-auto sm:min-h-auto flex flex-col gap-2">
@@ -76,8 +64,8 @@ export default function DraggableImagesProducts() {
       </div>
       <div className="max-w-[522px] w-full h-auto rounded-[4px]">
         <DraggableImages
-          imageRight={originalImage}
           imageLeft={transformedImage}
+          imageRight={originalImage}
         />
       </div>
       <div className="max-w-[520px] min-h-[57px] flex justify-between items-center">
@@ -92,7 +80,7 @@ export default function DraggableImagesProducts() {
         </div>
         <div
           className="max-w-[40px] min-h-[57px] flex flex-col justify-center items-center cursor-pointer hover:opacity-80"
-          onClick={() => handleInputRedirect(roomName, originalImage)}
+          onClick={() =>{ handleInputRedirect(roomName, originalImage); navigate('#formSec')}}
         >
           <img src={Input} alt="Input" title="Go to input form" />
           <div className="max-w-[40px] min-h-[17px] text-[12px] leading-[140%] text-center font-[400] text-[#2A2A2A]">
@@ -230,22 +218,22 @@ export default function DraggableImagesProducts() {
 
             <RoomCard
               roomName="Dining Room"
-              originalImage={dragImg1_2}
-              transformedImage={dragImg1_1}
+              originalImage={dragImg1_1}
+              transformedImage={dragImg1_2}
               roomKey="diningRoom"
             />
 
             <RoomCard
               roomName="Laundry Room"
-              originalImage={dragImg2_2}
-              transformedImage={dragImg2_1}
+              originalImage={dragImg2_1}
+              transformedImage={dragImg2_2}
               roomKey="laundryRoom"
             />
 
             <RoomCard
               roomName="Study Room"
-              originalImage={dragImg3_2}
-              transformedImage={dragImg3_1}
+              originalImage={dragImg3_1}
+              transformedImage={dragImg3_2}
               roomKey="studyRoom"
             />
           </div>

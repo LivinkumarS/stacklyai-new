@@ -8,7 +8,6 @@ import {
   useSearchParams,
 } from "react-router-dom";
 import { UserContext } from "../context/UserContext";
-
 export default function Header() {
   const navigate = useNavigate();
   const [showSideBar, setShowSideBar] = useState(false);
@@ -44,8 +43,11 @@ export default function Header() {
               </li>
               <li>
                 <NavLink
-                  className="text-[20px] font-bold text-[#2a2a2a] cursor-pointer no-underline leading-[100%] hover:text-[#007b82] NavLink visited:font-bold"
                   to="/products"
+                  onClick={() => {
+                    setShowSideBar(false);
+                  }}
+                  className="text-[20px] font-bold text-[#2a2a2a] cursor-pointer no-underline leading-[100%] hover:text-[#007b82]"
                 >
                   Products
                 </NavLink>
@@ -61,7 +63,7 @@ export default function Header() {
               <li>
                 <NavLink
                   className="text-[20px] font-bold text-[#2a2a2a] cursor-pointer no-underline leading-[100%] hover:text-[#007b82] NavLink visited:font-bold"
-                  to="/Api"
+                  to="/api"
                 >
                   API
                 </NavLink>
@@ -150,8 +152,8 @@ export default function Header() {
                 className="profile-list min-w-[150px] p-4 z-10 hidden group-hover:flex flex-col gap-2 absolute bottom-0 right-0 bg-white rounded-md"
                 style={{ transform: "translateY(95%)" }}
               >
-                <NavLink>My Profile</NavLink>
-                <NavLink>My Creations</NavLink>
+                <NavLink to="#">My Profile</NavLink>
+                <NavLink to="#">My Creations</NavLink>
                 <p className="w-full h-[1px] bg-gray-600 my-1"></p>
                 <NavLink
                   onClick={() => {
@@ -221,11 +223,11 @@ export default function Header() {
         </NavLink>
 
         <NavLink
-          className="text-[20px] font-bold text-[#2a2a2a] cursor-pointer no-underline leading-[100%] hover:text-[#007b82] NavLink visited:font-bold"
           to="/products"
           onClick={() => {
             setShowSideBar(false);
           }}
+          className="text-[20px] font-bold text-[#2a2a2a] cursor-pointer no-underline leading-[100%] hover:text-[#007b82]"
         >
           Products
         </NavLink>
